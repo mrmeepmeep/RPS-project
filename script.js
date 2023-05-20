@@ -12,42 +12,30 @@ function getComputerChoice() {
             computer = "PAPER";
             break;
         case 3:
-            computer = "SCISSORS"
+            computer = "SCISSORS";
             break;
     }
 }
 
 function playRound(playerSelection, computerSelection) {
-    if (computerSelection == computerSelection){
+    if (playerSelection == computerSelection){
             return "Its a DRAW!";
 }
     if (playerSelection === "ROCK" && computerSelection === "SCISSORS" ||
             playerSelection === "PAPER" && computerSelection === "ROCK" ||
-            playerSelection === "SCISSORS" && computerSelection === "PAPER");{
+            playerSelection === "SCISSORS" && computerSelection === "PAPER"){
             return "You win!";
-    
-    }
+ }
     else {
-        return "You lose!;"
+        return "You lose!";
     }
-  
-
-
-}
-prompt("Pick your weapon")
-        
-    
-            
-
-    
  
 
-    
-
+ }
 
     function game (playRound) {
         for (var i = 1; 1 < 6; i++) playRound(i);
-    }
+}
 
 
 
