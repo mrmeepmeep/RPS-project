@@ -1,50 +1,56 @@
-function getComputerChoice() { 
-let compChoices = ["rock" ,  "paper" , "scissors"]
-let randomChoice = Math.floor(Math.random() * compChoices.length) + 1
+playerSelection = playerSelection.toLowerCase
+computerSelection = computerSelection.toLowerCase
 
-if (randomChoice ===1) {
-    return "rock";
-}
-if (randomChoice === 2) {
-    return "paper";
-}
-if (randomChoice === 3) {
-    return "scissors";
-}
-}
+function getComputerChoice() {
+    const randNum = Math.floor(Math.random() * 3 + 1)
 
-// console.log(getComputerChoice());
-
+    switch (randNum){
+        case 1:
+            computer = "ROCK";
+            break;
+        case 2:
+            computer = "PAPER";
+            break;
+        case 3:
+            computer = "SCISSORS"
+            break;
+    }
+}
 
 function playRound(playerSelection, computerSelection) {
-playerSelection = playerSelection.toLowerCase();
-computerSelection = computerSelection.toLowerCase ();
-if (computerSelection == playerSelection) {
-    //print "Tie game!"
+    if (computerSelection == computerSelection){
+            return "Its a DRAW!";
 }
-    else if(
-        (computerSelection == "rock" && playerSelection == "scissors") ||
-        (computerSelection == "scissors" && playerSelection == "paper") ||
-        (computerSelection == "paper" && playerSelection == "rock")
-    ) {
-        // print "You lose!"
+    if (playerSelection === "ROCK" && computerSelection === "SCISSORS" ||
+            playerSelection === "PAPER" && computerSelection === "ROCK" ||
+            playerSelection === "SCISSORS" && computerSelection === "PAPER");{
+            return "You win!";
+    
     }
     else {
-
-        // print "You win!"
+        return "You lose!;"
     }
-}
+  
 
-const playerSelection = "rock";
+
+}
+prompt("Pick your weapon")
+        
+    
+            
+
+    
+ 
+
+    
+
+
+    function game (playRound) {
+        for (var i = 1; 1 < 6; i++) playRound(i);
+    }
+
+
+
+const playerSelection = "ROCK";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
-
-function game(playRound) {
-    for (var i=0;i<5;i++){
-
-    }
-}
-
-
-
-
